@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Time Zone</title>
 </head>
+
 <body>
+
+    <div class="container">
+        <h1>Timezone API</h1>
+
+        <section class="timezone-section">
+            <h2>Your Current Timezone</h2>
+            <!-- <p id="user-timezone">Detecting...</p> -->
+        </section>
+
+        <section>
+            <div class="raw_content">
+                <p>Name Of Time Zone :</p>
+                <p>Lat: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Long: </p>
+                <p>Offset STD: </p>
+                <p>Offset STD Seconds : </p>
+                <p>Offset DST : </p>
+                <p>Offset DST Seconds: </p>
+                <p>Country: </p>
+                <p>Postcode: </p>
+                <p>City: </p>
+            </div>
+        </section>
+
+        <section class="bottom_section">
+            <section class="address-section">
+                <h2>Find Timezone by Address</h2>
+                <input type="text" id="address-input" placeholder="Enter address here" />
+                <button id="find-timezone-btn">Find Timezone</button>
+                <p id="address-timezone"></p>
+            </section>
+
+            <section class="error-section">
+                <p id="error-message"></p>
+            </section>
+
+            <!-- Result section to be shown after search -->
+            <section id="result-box" style="display: none;">
+                <h1>Your result</h1>
+                <div class="result-content">
+                    <p>Name Of Time Zone : <span id="user-timezone"></span></p>
+                    <p>Lat: <span id="user-lat"></span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Long: <span id="user-lon"></span></p>
+                    <p>Offset STD: <span id="user-offset-std"></span></p>
+                    <p>Offset STD Seconds : <span id="user-offset-std-sec"></span></p>
+                    <p>Offset DST : <span id="user-offset-dst"></span></p>
+                    <p>Offset DST Seconds: <span id="user-offset-dst-sec"></span></p>
+                    <p>Country: <span id="user-country"></span></p>
+                    <p>Postcode: <span id="user-postcode"></span></p>
+                    <p>City: <span id="user-city"></span></p>
+                </div>
+            </section>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
